@@ -1,6 +1,6 @@
-# keymaster.js
+# shortcut-key.js
 
-Keymaster is a simple micro-library for defining and
+shortcut-key is a simple micro-library for defining and
 dispatching keyboard shortcuts in web applications.
 
 It has no dependencies.
@@ -11,18 +11,18 @@ it in.*
 
 ## Usage
 
-Include `keymaster.js` in your web app*, by loading it as usual:
+Include `shortcut-key.js` in your web app*, by loading it as usual:
 
 ```html
-<script src="keymaster.js"></script>
+<script src="shortcut-key.js"></script>
 ```
 
-Keymaster has no dependencies and can be used completely standalone.
+shortcut-key has no dependencies and can be used completely standalone.
 It should not interfere with any JavaScript libraries or frameworks.
 
 _*Preferably use a minified version that fits your workflow. You can
 run `make` to have UglifyJS (if you have it installed) create a
-`keymaster.min.js` file for you._
+`shortcut-key.min.js` file for you._
 
 ## Defining shortcuts
 
@@ -57,7 +57,7 @@ key('⌘+r, ctrl+r', function(event, handler){
 
 ## Supported keys
 
-Keymaster understands the following modifiers:
+shortcut-key understands the following modifiers:
 `⇧`, `shift`, `option`, `⌥`, `alt`, `ctrl`, `control`, `command`, and `⌘`.
 
 The following special keys can be used for shortcuts:
@@ -99,7 +99,7 @@ key.getPressedKeyCodes() // returns an array of key codes currently pressed
 ## Scopes
 
 If you want to reuse the same shortcut for seperate areas in your single page app,
-Keymaster supports switching between scopes. Use the `key.setScope` method to set scope.
+shortcut-key supports switching between scopes. Use the `key.setScope` method to set scope.
 
 ```javascript
 // define shortcuts with a scope
@@ -113,10 +113,10 @@ key.setScope('issues'); // default scope is 'all'
 
 ## Filter key presses
 
-By default, when an `INPUT`, `SELECT` or `TEXTAREA` element is focused, Keymaster doesn't process any shortcuts.
+By default, when an `INPUT`, `SELECT` or `TEXTAREA` element is focused, shortcut-key doesn't process any shortcuts.
 
 You can change this by overwriting `key.filter` with a new function. This function is called before
-Keymaster processes shortcuts, with the keydown event as argument.
+shortcut-key processes shortcuts, with the keydown event as argument.
 
 If your function returns false, then the no shortcuts will be processed.
 
@@ -147,7 +147,7 @@ focus and blur event handlers on your input element, and change scopes there as 
 
 ## noConflict mode
 
-You can call ```key.noConflict``` to remove the ```key``` function from global scope and restore whatever ```key``` was defined to before Keymaster was loaded. Calling ```key.noConflict``` will return the Keymaster ```key``` function.
+You can call ```key.noConflict``` to remove the ```key``` function from global scope and restore whatever ```key``` was defined to before shortcut-key was loaded. Calling ```key.noConflict``` will return the shortcut-key ```key``` function.
 
 ```javascript
 var k = key.noConflict();
@@ -175,10 +175,10 @@ key.unbind('o, enter', 'files');
 
 ## Notes
 
-Keymaster should work with any browser that fires `keyup` and `keydown` events,
+shortcut-key should work with any browser that fires `keyup` and `keydown` events,
 and is tested with IE (6+), Safari, Firefox and Chrome.
 
-See [http://madrobby.github.com/keymaster/](http://madrobby.github.com/keymaster/) for a live demo.
+See [http://madrobby.github.com/shortcut-key/](http://madrobby.github.com/shortcut-key/) for a live demo.
 
 
 ## CoffeeScript
@@ -201,12 +201,12 @@ alert 'shift is pressed, OMGZ!' if key.shift
 
 ## Contributing
 
-To contribute, please fork Keymaster, add your patch and tests for it (in the `test/` folder) and
+To contribute, please fork shortcut-key, add your patch and tests for it (in the `test/` folder) and
 submit a pull request.
 
 ## TODOs
 
 * Finish test suite
 
-Keymaster is (c) 2011-2013 Thomas Fuchs and may be freely distributed under the MIT license.
+shortcut-key is (c) 2011-2013 Thomas Fuchs and may be freely distributed under the MIT license.
 See the `MIT-LICENSE` file.

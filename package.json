@@ -1,11 +1,11 @@
 {
-  "name": "keymaster",
+  "name": "shortcut-key",
   "description": "library for defining and dispatching keyboard shortcuts",
-  "version": "1.6.1",
-  "author": "Thomas Fuchs <thomas@slash7.com> (http://mir.aculo.us)",
+  "version": "1.0.0",
+  "author": "Houfeng",
   "repository": {
     "type": "git",
-    "url": "https://github.com/madrobby/keymaster"
+    "url": "https://github.com/houfeng/shortcut-key"
   },
-  "main": "./keymaster.js"
+  "main": "./index.js"
 }
